@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-FROM mcr.microsoft.com/devcontainers/javascript-node:20
-=======
+
 FROM mcr.microsoft.com/devcontainers/javascript-node:4-24-bookworm
+>>>>>>> 0dd6fde (📄docs: Mejora el Readme Se agregan detalles iniciales del proyecto en el readme)
 
 # Install MongoDB command line tools - though mongo-database-tools not available on arm64
 ARG MONGO_TOOLS_VERSION=6.0
@@ -24,6 +23,3 @@ RUN . /etc/os-release \
 # [Optional] Uncomment if you want to install more global node modules
 # RUN su node -c "npm install -g <your-package-list-here>"
 
-
-
->>>>>>> 2f5e7c3 (Feat.Dev Container)
