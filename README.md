@@ -42,6 +42,7 @@ se desarrollara a lo largo del curso.
 *Ejemplos*
 > feat ✨:Agrega automatizacion de usuarios
 ## Back-end
-[Node](-/ .github/doc/node.md)
+
+* [Documentación de Node.js](./.github/doc/node.md)
 # 👤Autor
 [ITZEL Mendoza](https://github.com/ItzelMendoza1503)
