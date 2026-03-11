@@ -1,0 +1,11 @@
+{
+  "name": "Node.js & MongoDB",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" }
+  },
+  "forwardPorts": [3000, 27017],
+  "postCreateCommand": "npm install"
+}
