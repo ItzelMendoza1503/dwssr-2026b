@@ -14,5 +14,9 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "walk": "^2.3.15"
+  },
+  "imports": {
+    "#Server/*" :"./server/*",
+    "#routes/*" :"./server/routes/*"
   }
 }

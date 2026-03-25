@@ -5,9 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 //registro de  ruta a los  enrotadores 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var authorRouter = require('./routes/autors'); // Agregamos la 's' para que coincida con autors.js
+var indexRouter = require('#/routes/index');
+// Importamos el archivo autors.js para que se registre el enrutador
+var usersRouter = require('#/routes/users');
+var authorRouter = require('# /routes/autors'); // Agregamos la 's' para que coincida con autors.js
 var app = express();
 
 
