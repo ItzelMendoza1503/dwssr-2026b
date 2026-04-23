@@ -58,7 +58,7 @@ export function viteAssets(){
     //Css files
     if (mainEntry.css){
         mainEntry.css.forEach(cssFile => {
-            tags += `<script type="stylesheet" src="/${cssFile}"></script>`
+            tags += `<link rel="stylesheet" href="/${cssFile}">`
         });
     }
 
