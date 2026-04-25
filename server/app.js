@@ -10,6 +10,7 @@ import hbs from 'hbs';
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
 import authorRouter from './routes/author.js';
+import { registerViteHelper } from './lib/vite.js';
 
 // Importando el registrador de helpers (Asegúrate que la carpeta sea lib)
 //import { registerViteHelper } from './lib/vite.js';
@@ -53,7 +54,9 @@ app.use(function(req, res, next) {
 });
 
 // Manejador de errores generales
-app.use(function(err, req, res, next) {
+
+app.use(function(err, req, res, next) { 
+  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
