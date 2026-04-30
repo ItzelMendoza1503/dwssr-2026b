@@ -36,4 +36,4 @@ export default [
       ...js.configs.recommended.rules,
     }
   },
-];
+]

@@ -1,5 +1,6 @@
-//importar estilo 
-import './style/main.css'
+//importar un estilo
+import './styles/main.css'
+import "./styles/header.css"
 
-//scripts principales
-console.log("❤️ Vite + Express + Handlebars funcionando")
+//Scripts principales
+console.log("🎉 Vite + Express + Handlebards funcionionando")
