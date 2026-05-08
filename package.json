@@ -13,7 +13,8 @@
     "lint": "npm run lint:backend && npm run lint:front",
     "lint:backend": "eslint \"server/**/*.js\" ",
     "lint:front": "eslint \"src/**/*.js\" ",
-    "lint: fix": "eslint --fix "
+    "lint: fix": "eslint --fix ",
+    "clean:logs": "rm -rf./server/ logs/*.log"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -31,7 +32,7 @@
     "concurrently": "^9.2.1",
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.5.0",
+    "globals": "^17.5.0", 
     "nodemon": "^3.1.14",
     "prettier": "^3.8.3",
     "tailwindcss": "^4.2.4",

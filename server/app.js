@@ -4,12 +4,15 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
+//Importando winston para logging
+import logger from './lib/winston.js';
 import hbs from 'hbs';
 
 // Importando enrutadores con rutas relativas correctas
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
 import authorRouter from './routes/author.js';
+// Importando el registrador de helpers (Asegúrate que la carpeta sea lib)
 import { registerViteHelper } from './lib/vite.js';
 
 // Importando el registrador de helpers (Asegúrate que la carpeta sea lib)
@@ -27,8 +30,15 @@ app.set('view engine', 'hbs');
 
 // Registro de helpers
 //registerViteHelper(hbs);
+//redirigiendo el flujo de logs de morgan 
+// a winston
+//morgan --> [logs] --> winston --> consola y archivos
 
-app.use(morgan('dev'));
+app.use(morgan('dev', {
+  stream: {
+    write: (message) => logger.http(message.trim()),
+  },
+})); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
