@@ -1,0 +1,5 @@
+@import "tailwindcss";
+/* Esta linea especifica donde se encuentra las clases de tailwindcss */
+@source "../../server/views/*/.hbs";
+/*  */
+@plugin "daisyui/index.js";
